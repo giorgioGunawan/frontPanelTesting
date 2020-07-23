@@ -1,0 +1,106 @@
+[OPTIONS]
+Compiled file=FrontPanelAPI.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=FrontPanel API
+
+[WINDOWS]
+main="FrontPanel API","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+migrate_fpdevices.html
+deprecated.html
+classokCDeviceSensors.html
+classokCDeviceSensors-members.html
+classokCDeviceSettings.html
+classokCDeviceSettings-members.html
+classokCFrontPanel.html
+classokCFrontPanel-members.html
+classokCPLL22150.html
+classokCPLL22150-members.html
+classokCPLL22393.html
+classokCPLL22393-members.html
+structokTDeviceInfo.html
+structokTDeviceInfo-members.html
+structokTDeviceSensor.html
+structokTDeviceSensor-members.html
+structokTFlashLayout.html
+structokTFlashLayout-members.html
+structokTFPGAResetProfile.html
+structokTFPGAResetProfile-members.html
+structokTRegisterEntry.html
+structokTRegisterEntry-members.html
+structokTTriggerEntry.html
+structokTTriggerEntry-members.html
+namespaceOpalKelly.html
+classOpalKelly_1_1Buffer.html
+classOpalKelly_1_1Buffer-members.html
+classOpalKelly_1_1FrontPanelDevices.html
+classOpalKelly_1_1FrontPanelDevices-members.html
+classOpalKelly_1_1FrontPanelManager.html
+classOpalKelly_1_1FrontPanelManager-members.html
+structOpalKelly_1_1FrontPanelManager_1_1CallbackInfo.html
+structOpalKelly_1_1FrontPanelManager_1_1CallbackInfo-members.html
+classOpalKelly_1_1ProgressCallback.html
+classOpalKelly_1_1ProgressCallback-members.html
+classOpalKelly_1_1ScriptEngine.html
+classOpalKelly_1_1ScriptEngine-members.html
+classOpalKelly_1_1ScriptEngine_1_1AsyncResultHandler.html
+classOpalKelly_1_1ScriptEngine_1_1AsyncResultHandler-members.html
+classOpalKelly_1_1ScriptValue.html
+classOpalKelly_1_1ScriptValue-members.html
+classOpalKelly_1_1ScriptValues.html
+classOpalKelly_1_1ScriptValues-members.html
+dir_d44c64559bbebec7f509842c48db8b23.html
+dir_68267d1309a1af8e8297ef4c3efbcdba.html
+index.html
+pages.html
+namespaces.html
+namespacemembers.html
+namespacemembers_func.html
+namespacemembers_type.html
+annotated.html
+classes.html
+functions.html
+functions_b.html
+functions_c.html
+functions_d.html
+functions_e.html
+functions_f.html
+functions_g.html
+functions_h.html
+functions_i.html
+functions_l.html
+functions_m.html
+functions_n.html
+functions_o.html
+functions_p.html
+functions_r.html
+functions_s.html
+functions_t.html
+functions_u.html
+functions_v.html
+functions_w.html
+functions_0x7e.html
+functions_func.html
+functions_vars.html
+globals.html
+globals_defs.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png
