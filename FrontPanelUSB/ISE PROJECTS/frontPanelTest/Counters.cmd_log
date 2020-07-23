@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/User/Desktop/frontPanelTesting/FrontPanelUSB/ISE PROJECTS/frontPanelTest/Counters.xst" -ofn "C:/Users/User/Desktop/frontPanelTesting/FrontPanelUSB/ISE PROJECTS/frontPanelTest/Counters.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc xem3010.ucf -p xc3s1500-fg320-4 "Counters.ngc" Counters.ngd  
+map -intstyle ise -p xc3s1500-fg320-4 -cm area -ir off -pr off -c 100 -o Counters_map.ncd Counters.ngd Counters.pcf 
+par -w -intstyle ise -ol high -t 1 Counters_map.ncd Counters.ncd Counters.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Counters.twx Counters.ncd -o Counters.twr Counters.pcf -ucf xem3010.ucf 
+bitgen -intstyle ise -f Counters.ut Counters.ncd 
+xst -intstyle ise -ifn "C:/Users/User/Desktop/frontPanelTesting/FrontPanelUSB/ISE PROJECTS/frontPanelTest/Counters.xst" -ofn "C:/Users/User/Desktop/frontPanelTesting/FrontPanelUSB/ISE PROJECTS/frontPanelTest/Counters.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc xem3010.ucf -p xc3s1500-fg320-4 "Counters.ngc" Counters.ngd  
+map -intstyle ise -p xc3s1500-fg320-4 -cm area -ir off -pr off -c 100 -o Counters_map.ncd Counters.ngd Counters.pcf 
+par -w -intstyle ise -ol high -t 1 Counters_map.ncd Counters.ncd Counters.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Counters.twx Counters.ncd -o Counters.twr Counters.pcf -ucf xem3010.ucf 
+bitgen -intstyle ise -f Counters.ut Counters.ncd 

@@ -1,0 +1,733 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Counters'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s1500-fg320-4 -cm area -ir off -pr off
+-c 100 -o Counters_map.ncd Counters.ngd Counters.pcf 
+Target Device  : xc3s1500
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Thu Jul 23 11:03:39 2020
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           261 out of  26,624    1%
+  Number of 4 input LUTs:               343 out of  26,624    1%
+Logic Distribution:
+  Number of occupied Slices:            250 out of  13,312    1%
+    Number of Slices containing only related logic:     250 out of     250 100%
+    Number of Slices containing unrelated logic:          0 out of     250   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         354 out of  26,624    1%
+    Number used as logic:               343
+    Number used as a route-thru:         11
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 41 out of     221   18%
+  Number of BUFGMUXs:                     3 out of       8   37%
+  Number of DCMs:                         1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                2.95
+
+Peak Memory Usage:  4416 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ok1<26> has no load.
+INFO:LIT:395 - The above info message is repeated 27 more times for the
+   following (max. 5 shown):
+   ok1<30>,
+   wi00/ep_dataout<15>,
+   wi00/ep_dataout<14>,
+   wi00/ep_dataout<13>,
+   wi00/ep_dataout<12>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 144 block(s) removed
+ 114 block(s) optimized away
+ 147 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "wi00/ep_dataout<15>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<14>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<13>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<12>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<11>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<10>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<9>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<8>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<7>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<6>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<5>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<4>" is sourceless and has been removed.
+The signal "wi00/ep_dataout<3>" is sourceless and has been removed.
+The signal "wi00/ep_datahold<3>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_3" (SFF) removed.
+The signal "wi00/ep_datahold<4>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_4" (SFF) removed.
+The signal "wi00/ep_datahold<5>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_5" (SFF) removed.
+The signal "wi00/ep_datahold<6>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_6" (SFF) removed.
+The signal "wi00/ep_datahold<7>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_7" (SFF) removed.
+The signal "wi00/ep_datahold<8>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_8" (SFF) removed.
+The signal "wi00/ep_datahold<9>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_9" (SFF) removed.
+The signal "wi00/ep_datahold<10>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_10" (SFF) removed.
+The signal "wi00/ep_datahold<11>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_11" (SFF) removed.
+The signal "wi00/ep_datahold<12>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_12" (SFF) removed.
+The signal "wi00/ep_datahold<13>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_13" (SFF) removed.
+The signal "wi00/ep_datahold<14>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_14" (SFF) removed.
+The signal "wi00/ep_datahold<15>" is sourceless and has been removed.
+ Sourceless block "wi00/ep_dataout_15" (SFF) removed.
+The signal "ti40/ep_trigger<15>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<14>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<13>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<12>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<11>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<10>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<9>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<8>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<7>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<6>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<5>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<4>" is sourceless and has been removed.
+The signal "ti40/ep_trigger<3>" is sourceless and has been removed.
+The signal "ti40/eptrig_xor0000<3>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_3" (SFF) removed.
+  The signal "ti40/eptrig<3>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_3" (FF) removed.
+    The signal "ti40/trigff0<3>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_3" (FF) removed.
+      The signal "ti40/trigff1<3>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<3>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<3>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_3" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<3>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<4>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_4" (SFF) removed.
+  The signal "ti40/eptrig<4>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_4" (FF) removed.
+    The signal "ti40/trigff0<4>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_4" (FF) removed.
+      The signal "ti40/trigff1<4>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<4>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<4>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_4" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<4>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<5>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_5" (SFF) removed.
+  The signal "ti40/eptrig<5>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_5" (FF) removed.
+    The signal "ti40/trigff0<5>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_5" (FF) removed.
+      The signal "ti40/trigff1<5>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<5>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<5>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_5" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<5>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<6>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_6" (SFF) removed.
+  The signal "ti40/eptrig<6>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_6" (FF) removed.
+    The signal "ti40/trigff0<6>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_6" (FF) removed.
+      The signal "ti40/trigff1<6>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<6>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<6>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_6" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<6>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<7>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_7" (SFF) removed.
+  The signal "ti40/eptrig<7>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_7" (FF) removed.
+    The signal "ti40/trigff0<7>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_7" (FF) removed.
+      The signal "ti40/trigff1<7>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<7>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<7>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_7" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<7>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<8>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_8" (SFF) removed.
+  The signal "ti40/eptrig<8>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_8" (FF) removed.
+    The signal "ti40/trigff0<8>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_8" (FF) removed.
+      The signal "ti40/trigff1<8>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<8>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<8>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_8" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<8>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<9>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_9" (SFF) removed.
+  The signal "ti40/eptrig<9>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_9" (FF) removed.
+    The signal "ti40/trigff0<9>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_9" (FF) removed.
+      The signal "ti40/trigff1<9>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<9>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<9>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_9" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<9>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<10>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_10" (SFF) removed.
+  The signal "ti40/eptrig<10>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_10" (FF) removed.
+    The signal "ti40/trigff0<10>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_10" (FF) removed.
+      The signal "ti40/trigff1<10>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<10>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<10>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_10" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<10>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<11>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_11" (SFF) removed.
+  The signal "ti40/eptrig<11>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_11" (FF) removed.
+    The signal "ti40/trigff0<11>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_11" (FF) removed.
+      The signal "ti40/trigff1<11>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<11>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<11>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_11" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<11>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<12>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_12" (SFF) removed.
+  The signal "ti40/eptrig<12>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_12" (FF) removed.
+    The signal "ti40/trigff0<12>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_12" (FF) removed.
+      The signal "ti40/trigff1<12>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<12>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<12>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_12" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<12>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<13>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_13" (SFF) removed.
+  The signal "ti40/eptrig<13>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_13" (FF) removed.
+    The signal "ti40/trigff0<13>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_13" (FF) removed.
+      The signal "ti40/trigff1<13>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<13>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<13>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_13" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<13>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<14>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_14" (SFF) removed.
+  The signal "ti40/eptrig<14>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_14" (FF) removed.
+    The signal "ti40/trigff0<14>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_14" (FF) removed.
+      The signal "ti40/trigff1<14>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<14>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<14>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_14" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<14>1" (ROM) removed.
+The signal "ti40/eptrig_xor0000<15>" is sourceless and has been removed.
+ Sourceless block "ti40/eptrig_15" (SFF) removed.
+  The signal "ti40/eptrig<15>" is sourceless and has been removed.
+   Sourceless block "ti40/trigff0_15" (FF) removed.
+    The signal "ti40/trigff0<15>" is sourceless and has been removed.
+     Sourceless block "ti40/trigff1_15" (FF) removed.
+      The signal "ti40/trigff1<15>" is sourceless and has been removed.
+       Sourceless block "ti40/Mxor_ep_trigger_xor0000_Result<15>1" (ROM) removed.
+        The signal "ti40/ep_trigger_xor0000<15>" is sourceless and has been removed.
+         Sourceless block "ti40/ep_trigger_15" (FF) removed.
+   Sourceless block "ti40/Mxor_eptrig_xor0000_Result<15>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<3>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_3" (FF) removed.
+  The signal "ok1<3>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_3" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<3>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<4>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_4" (FF) removed.
+  The signal "ok1<4>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_4" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<4>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<5>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_5" (FF) removed.
+  The signal "ok1<5>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_5" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<5>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<6>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_6" (FF) removed.
+  The signal "ok1<6>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_6" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<6>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<7>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_7" (FF) removed.
+  The signal "ok1<7>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_7" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<7>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<8>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_8" (FF) removed.
+  The signal "ok1<8>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_8" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<8>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<9>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_9" (FF) removed.
+  The signal "ok1<9>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_9" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<9>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<10>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_10" (FF) removed.
+  The signal "ok1<10>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_10" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<10>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<11>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_11" (FF) removed.
+  The signal "ok1<11>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_11" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<11>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<12>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_12" (FF) removed.
+  The signal "ok1<12>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_12" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<12>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<13>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_13" (FF) removed.
+  The signal "ok1<13>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_13" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<13>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<14>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_14" (FF) removed.
+  The signal "ok1<14>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_14" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<14>1" (ROM) removed.
+The signal "okHI/hicore/ti_dataout_mux0000<15>" is sourceless and has been
+removed.
+ Sourceless block "okHI/hicore/ti_dataout_15" (FF) removed.
+  The signal "ok1<15>" is sourceless and has been removed.
+   Sourceless block "wi00/ep_datahold_15" (SFF) removed.
+   Sourceless block "okHI/hicore/ti_dataout_mux0000<15>1" (ROM) removed.
+The signal "okHI/hicore/host_datain<11>" is sourceless and has been removed.
+The signal "okHI/hicore/host_datain<12>" is sourceless and has been removed.
+The signal "okHI/hicore/host_datain<13>" is sourceless and has been removed.
+The signal "okHI/hicore/host_datain<14>" is sourceless and has been removed.
+The signal "okHI/hicore/host_datain<15>" is sourceless and has been removed.
+The signal "okHI/hicore/ti_read_mux00002" is sourceless and has been removed.
+ Sourceless block "okHI/hicore/ti_read" (SFF) removed.
+  The signal "ok1<26>" is sourceless and has been removed.
+The signal "okHI/hicore/ti_read_mux000010" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "ok1<30>" is unused and has been removed.
+ Unused block "okHI/hicore/ti_blockstrobe" (SFF) removed.
+The signal "ok2<16>" is unused and has been removed.
+The signal "ok2x<84>" is unused and has been removed.
+The signal "okHI/hi_datain<11>" is unused and has been removed.
+ Unused block "okHI/iobuf11/IBUF" (BUF) removed.
+The signal "okHI/hi_datain<12>" is unused and has been removed.
+ Unused block "okHI/iobuf12/IBUF" (BUF) removed.
+The signal "okHI/hi_datain<13>" is unused and has been removed.
+ Unused block "okHI/iobuf13/IBUF" (BUF) removed.
+The signal "okHI/hi_datain<14>" is unused and has been removed.
+ Unused block "okHI/iobuf14/IBUF" (BUF) removed.
+The signal "okHI/hi_datain<15>" is unused and has been removed.
+ Unused block "okHI/iobuf15/IBUF" (BUF) removed.
+The signal "wireOR/ok2<16>" is unused and has been removed.
+Unused block "okHI/hicore/host_datain_11" (FF) removed.
+Unused block "okHI/hicore/host_datain_12" (FF) removed.
+Unused block "okHI/hicore/host_datain_13" (FF) removed.
+Unused block "okHI/hicore/host_datain_14" (FF) removed.
+Unused block "okHI/hicore/host_datain_15" (FF) removed.
+Unused block "okHI/hicore/ti_read_mux0000101" (ROM) removed.
+Unused block "okHI/hicore/ti_read_mux00002" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		okHI/hicore/XST_GND
+VCC 		okHI/hicore/XST_VCC
+GND 		ti40/XST_GND
+GND 		to60/XST_GND
+FDC 		to60/ep_trigger0_10
+   optimized to 0
+FDC 		to60/ep_trigger0_11
+   optimized to 0
+FDC 		to60/ep_trigger0_12
+   optimized to 0
+FDC 		to60/ep_trigger0_13
+   optimized to 0
+FDC 		to60/ep_trigger0_14
+   optimized to 0
+FDC 		to60/ep_trigger0_15
+   optimized to 0
+FDC 		to60/ep_trigger0_2
+   optimized to 0
+FDC 		to60/ep_trigger0_3
+   optimized to 0
+FDC 		to60/ep_trigger0_4
+   optimized to 0
+FDC 		to60/ep_trigger0_5
+   optimized to 0
+FDC 		to60/ep_trigger0_6
+   optimized to 0
+FDC 		to60/ep_trigger0_7
+   optimized to 0
+FDC 		to60/ep_trigger0_8
+   optimized to 0
+FDC 		to60/ep_trigger0_9
+   optimized to 0
+GND 		to61/XST_GND
+FDC 		to61/ep_trigger0_1
+   optimized to 0
+FDC 		to61/ep_trigger0_10
+   optimized to 0
+FDC 		to61/ep_trigger0_11
+   optimized to 0
+FDC 		to61/ep_trigger0_12
+   optimized to 0
+FDC 		to61/ep_trigger0_13
+   optimized to 0
+FDC 		to61/ep_trigger0_14
+   optimized to 0
+FDC 		to61/ep_trigger0_15
+   optimized to 0
+FDC 		to61/ep_trigger0_2
+   optimized to 0
+FDC 		to61/ep_trigger0_3
+   optimized to 0
+FDC 		to61/ep_trigger0_4
+   optimized to 0
+FDC 		to61/ep_trigger0_5
+   optimized to 0
+FDC 		to61/ep_trigger0_6
+   optimized to 0
+FDC 		to61/ep_trigger0_7
+   optimized to 0
+FDC 		to61/ep_trigger0_8
+   optimized to 0
+FDC 		to61/ep_trigger0_9
+   optimized to 0
+GND 		wi00/XST_GND
+LUT2_L 		wireOR/ok2<10>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<10>_SW0/LUT2_L_BUF
+LUT2_L 		wireOR/ok2<11>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<11>_SW0/LUT2_L_BUF
+LUT2_L 		wireOR/ok2<12>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<12>_SW0/LUT2_L_BUF
+LUT2_L 		wireOR/ok2<13>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<13>_SW0/LUT2_L_BUF
+LUT2_L 		wireOR/ok2<14>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<14>_SW0/LUT2_L_BUF
+LUT2_L 		wireOR/ok2<15>_SW0
+   optimized to 0
+LOCALBUF 		wireOR/ok2<15>_SW0/LUT2_L_BUF
+LUT4 		wireOR/ok2<16>1
+   optimized to 0
+MUXF5 		wireOR/ok2<16>_f5
+GND 		wo20/XST_GND
+LUT2 		wo20/ok2_10_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_11_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_12_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_13_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_14_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_15_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_8_mux00001
+   optimized to 0
+LUT2 		wo20/ok2_9_mux00001
+   optimized to 0
+FDRE 		wo20/wirehold_10
+   optimized to 0
+FDRE 		wo20/wirehold_11
+   optimized to 0
+FDRE 		wo20/wirehold_12
+   optimized to 0
+FDRE 		wo20/wirehold_13
+   optimized to 0
+FDRE 		wo20/wirehold_14
+   optimized to 0
+FDRE 		wo20/wirehold_15
+   optimized to 0
+FDRE 		wo20/wirehold_8
+   optimized to 0
+FDRE 		wo20/wirehold_9
+   optimized to 0
+GND 		wo21/XST_GND
+LUT2 		wo21/ok2_10_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_11_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_12_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_13_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_14_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_15_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_8_mux00001
+   optimized to 0
+LUT2 		wo21/ok2_9_mux00001
+   optimized to 0
+FDRE 		wo21/wirehold_10
+   optimized to 0
+FDRE 		wo21/wirehold_11
+   optimized to 0
+FDRE 		wo21/wirehold_12
+   optimized to 0
+FDRE 		wo21/wirehold_13
+   optimized to 0
+FDRE 		wo21/wirehold_14
+   optimized to 0
+FDRE 		wo21/wirehold_15
+   optimized to 0
+FDRE 		wo21/wirehold_8
+   optimized to 0
+FDRE 		wo21/wirehold_9
+   optimized to 0
+GND 		wo22/XST_GND
+LUT2 		wo22/ok2_10_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_11_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_12_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_13_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_14_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_15_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_2_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_3_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_4_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_5_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_6_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_7_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_8_mux00001
+   optimized to 0
+LUT2 		wo22/ok2_9_mux00001
+   optimized to 0
+FDRE 		wo22/wirehold_10
+   optimized to 0
+FDRE 		wo22/wirehold_11
+   optimized to 0
+FDRE 		wo22/wirehold_12
+   optimized to 0
+FDRE 		wo22/wirehold_13
+   optimized to 0
+FDRE 		wo22/wirehold_14
+   optimized to 0
+FDRE 		wo22/wirehold_15
+   optimized to 0
+FDRE 		wo22/wirehold_2
+   optimized to 0
+FDRE 		wo22/wirehold_3
+   optimized to 0
+FDRE 		wo22/wirehold_4
+   optimized to 0
+FDRE 		wo22/wirehold_5
+   optimized to 0
+FDRE 		wo22/wirehold_6
+   optimized to 0
+FDRE 		wo22/wirehold_7
+   optimized to 0
+FDRE 		wo22/wirehold_8
+   optimized to 0
+FDRE 		wo22/wirehold_9
+   optimized to 0
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| button<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| button<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk1                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk2                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<3>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<4>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<5>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<6>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_in<7>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| hi_inout<0>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<1>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<2>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<3>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<4>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<5>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<6>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<7>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<8>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<9>                        | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<10>                       | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_inout<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_muxsel                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_out<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hi_out<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| i2c_scl                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              | PULLUP   |          |
+| i2c_sda                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              | PULLUP   |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

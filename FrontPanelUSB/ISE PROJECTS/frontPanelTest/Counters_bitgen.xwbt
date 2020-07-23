@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\User\Desktop\frontPanelTesting\FrontPanelUSB\ISE PROJECTS\frontPanelTest\Counters.ncd
+OUTFILE=C:\Users\User\Desktop\frontPanelTesting\FrontPanelUSB\ISE PROJECTS\frontPanelTest\Counters.bit
+FAMILY=Spartan3
+PART=xc3s1500-4fg320
+WORKINGDIR=C:\Users\User\Desktop\frontPanelTesting\FrontPanelUSB\ISE PROJECTS\frontPanelTest
+LICENSE=WebPack
+USER_INFO=__0_0_0

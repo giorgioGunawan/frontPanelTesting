@@ -1,0 +1,670 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Counters.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Counters.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Counters"
+Output Format                      : NGC
+Target Device                      : xc3s1500-4-fg320
+
+---- Source Options
+Top Module Name                    : Counters
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "okLibrary.v" in library work
+Module <okHost> compiled
+Module <okCore> compiled
+Module <okWireIn> compiled
+Module <okWireOut> compiled
+Module <okTriggerIn> compiled
+Module <okTriggerOut> compiled
+Module <okPipeIn> compiled
+Module <okPipeOut> compiled
+Module <okBTPipeIn> compiled
+Module <okBTPipeOut> compiled
+Compiling verilog file "Counters.v" in library work
+Module <okWireOR> compiled
+Module <Counters> compiled
+No errors in compilation
+Analysis of file <"Counters.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Counters> in library <work>.
+
+Analyzing hierarchy for module <okHost> in library <work>.
+
+Analyzing hierarchy for module <okWireOR> in library <work> with parameters.
+	N = "00000000000000000000000000000101"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Counters>.
+Module <Counters> is correct for synthesis.
+ 
+Analyzing module <okHost> in library <work>.
+Module <okHost> is correct for synthesis.
+ 
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <clkbuf> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf0> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf1> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf2> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf3> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf4> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf5> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf6> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf7> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf8> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf9> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf10> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf11> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf12> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf13> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf14> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <iobuf15> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf0> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <obuf0> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf0> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf0> in unit <okHost>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf1> in unit <okHost>.
+    Set user-defined property "DRIVE =  12" for instance <obuf1> in unit <okHost>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf1> in unit <okHost>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf1> in unit <okHost>.
+Analyzing module <okWireOR> in library <work>.
+	N = 32'sb00000000000000000000000000000101
+Module <okWireOR> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <okWireOR>.
+    Related source file is "okLibrary.v".
+Unit <okWireOR> synthesized.
+
+
+Synthesizing Unit <okHost>.
+    Related source file is "okLibrary.v".
+Unit <okHost> synthesized.
+
+
+Synthesizing Unit <Counters>.
+    Related source file is "Counters.v".
+WARNING:Xst:646 - Signal <ti_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ep40wire<15:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ep00wire<15:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit tristate buffer for signal <i2c_scl>.
+    Found 1-bit tristate buffer for signal <i2c_sda>.
+    Found 1-bit register for signal <clk1div>.
+    Found 1-bit register for signal <clk2div>.
+    Found 8-bit up counter for signal <count1>.
+    Found 1-bit register for signal <count1eq00>.
+    Found 1-bit register for signal <count1eq80>.
+    Found 8-bit updown counter for signal <count2>.
+    Found 8-bit adder for signal <count2$add0000> created at line 125.
+    Found 1-bit register for signal <count2eqFF>.
+    Found 24-bit down counter for signal <div1>.
+    Found 24-bit down counter for signal <div2>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Tristate(s).
+Unit <Counters> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 24-bit down counter                                   : 2
+ 8-bit up counter                                      : 1
+ 8-bit updown counter                                  : 1
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <okWireIn.ngc>.
+Reading core <okWireOut.ngc>.
+Reading core <okTriggerIn.ngc>.
+Reading core <okTriggerOut.ngc>.
+Reading core <okCore.ngc>.
+Loading core <okWireIn> for timing and area information for instance <wi00>.
+Loading core <okWireOut> for timing and area information for instance <wo20>.
+Loading core <okWireOut> for timing and area information for instance <wo21>.
+Loading core <okWireOut> for timing and area information for instance <wo22>.
+Loading core <okTriggerIn> for timing and area information for instance <ti40>.
+Loading core <okTriggerOut> for timing and area information for instance <to60>.
+Loading core <okTriggerOut> for timing and area information for instance <to61>.
+Loading core <okCore> for timing and area information for instance <hicore>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 4
+ 24-bit down counter                                   : 2
+ 8-bit up counter                                      : 1
+ 8-bit updown counter                                  : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Counters> ...
+
+Optimizing unit <okHost> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Counters, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Counters.ngr
+Top Level Output File Name         : Counters
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 41
+
+Cell Usage :
+# BELS                             : 654
+#      GND                         : 9
+#      INV                         : 74
+#      LUT1                        : 10
+#      LUT2                        : 135
+#      LUT2_L                      : 16
+#      LUT3                        : 18
+#      LUT4                        : 207
+#      LUT4_D                      : 1
+#      MULT_AND                    : 7
+#      MUXCY                       : 82
+#      MUXF5                       : 18
+#      VCC                         : 2
+#      XORCY                       : 75
+# FlipFlops/Latches                : 418
+#      FDC                         : 116
+#      FDCE                        : 32
+#      FDE                         : 67
+#      FDR                         : 71
+#      FDRE                        : 114
+#      FDRS                        : 14
+#      FDRSE                       : 1
+#      FDS                         : 3
+# Clock Buffers                    : 3
+#      BUFGDLL                     : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 38
+#      IBUF                        : 9
+#      IOBUF                       : 16
+#      OBUF                        : 11
+#      OBUFT                       : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1500fg320-4 
+
+ Number of Slices:                      301  out of  13312     2%  
+ Number of Slice Flip Flops:            418  out of  26624     1%  
+ Number of 4 input LUTs:                461  out of  26624     1%  
+ Number of IOs:                          41
+ Number of bonded IOBs:                  40  out of    221    18%  
+ Number of GCLKs:                         3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+hi_in<0>                           | BUFGDLL                | 201   |
+clk2                               | BUFGP                  | 132   |
+clk1                               | BUFGP                  | 85    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+------------------------+-------+
+Control Signal                             | Buffer(FF name)        | Load  |
+-------------------------------------------+------------------------+-------+
+okHI/hicore/ok1<25>(okHI/hicore/ti_reset:Q)| NONE(ti40/ep_trigger_0)| 148   |
+-------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.220ns (Maximum Frequency: 89.127MHz)
+   Minimum input arrival time before clock: 7.808ns
+   Maximum output required time after clock: 9.272ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hi_in<0>'
+  Clock period: 11.220ns (frequency: 89.127MHz)
+  Total number of paths / destination ports: 1969 / 377
+-------------------------------------------------------------------------
+Delay:               11.220ns (Levels of Logic = 9)
+  Source:            okHI/hicore/ti_addr_0 (FF)
+  Destination:       okHI/hicore/hi_dataout_0 (FF)
+  Source Clock:      hi_in<0> rising
+  Destination Clock: hi_in<0> rising
+
+  Data Path: okHI/hicore/ti_addr_0 to okHI/hicore/hi_dataout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.720   1.509  ti_addr_0 (ok1<16>)
+     end scope: 'okHI/hicore'
+     begin scope: 'wo20'
+     LUT4:I0->O            1   0.551   1.140  ok2_15_cmp_eq0000826 (ok2_15_cmp_eq0000826)
+     LUT4:I0->O           16   0.551   1.576  ok2_15_cmp_eq00008136 (ok2_15_cmp_eq0000)
+     LUT2:I0->O            1   0.551   1.140  ok2_4_mux00001 (ok2<4>)
+     end scope: 'wo20'
+     LUT2_L:I0->LO         1   0.551   0.126  wireOR/ok2<4>_SW0 (N20)
+     LUT4:I3->O            1   0.551   1.140  wireOR/ok2<4> (ok2<4>)
+     begin scope: 'okHI/hicore'
+     LUT4:I0->O            1   0.551   0.000  hi_dataout_mux0000<4>1 (hi_dataout_mux0000<4>1)
+     MUXF5:I0->O           1   0.360   0.000  hi_dataout_mux0000<4>_f5 (hi_dataout_mux0000<4>)
+     FDE:D                     0.203          hi_dataout_4
+    ----------------------------------------
+    Total                     11.220ns (4.589ns logic, 6.631ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk2'
+  Clock period: 7.775ns (frequency: 128.617MHz)
+  Total number of paths / destination ports: 1384 / 156
+-------------------------------------------------------------------------
+Delay:               7.775ns (Levels of Logic = 8)
+  Source:            div2_10 (FF)
+  Destination:       div2_0 (FF)
+  Source Clock:      clk2 rising
+  Destination Clock: clk2 rising
+
+  Data Path: div2_10 to div2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  div2_10 (div2_10)
+     LUT4:I0->O            1   0.551   0.000  div2_not0001_wg_lut<0> (div2_not0001_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  div2_not0001_wg_cy<0> (div2_not0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  div2_not0001_wg_cy<1> (div2_not0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  div2_not0001_wg_cy<2> (div2_not0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  div2_not0001_wg_cy<3> (div2_not0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  div2_not0001_wg_cy<4> (div2_not0001_wg_cy<4>)
+     MUXCY:CI->O           2   0.281   0.877  div2_not0001_wg_cy<5> (div2_not0001)
+     INV:I->O             24   0.551   1.797  div2_not0001_inv1_INV_0 (div2_not0001_inv)
+     FDR:R                     1.026          div2_0
+    ----------------------------------------
+    Total                      7.775ns (3.885ns logic, 3.890ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1'
+  Clock period: 7.775ns (frequency: 128.617MHz)
+  Total number of paths / destination ports: 1085 / 126
+-------------------------------------------------------------------------
+Delay:               7.775ns (Levels of Logic = 8)
+  Source:            div1_10 (FF)
+  Destination:       div1_2 (FF)
+  Source Clock:      clk1 rising
+  Destination Clock: clk1 rising
+
+  Data Path: div1_10 to div1_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  div1_10 (div1_10)
+     LUT4:I0->O            1   0.551   0.000  div1_not0001_wg_lut<0> (div1_not0001_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  div1_not0001_wg_cy<0> (div1_not0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  div1_not0001_wg_cy<1> (div1_not0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  div1_not0001_wg_cy<2> (div1_not0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  div1_not0001_wg_cy<3> (div1_not0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  div1_not0001_wg_cy<4> (div1_not0001_wg_cy<4>)
+     MUXCY:CI->O           2   0.281   0.877  div1_not0001_wg_cy<5> (div1_not0001)
+     INV:I->O             24   0.551   1.797  div1_not0001_inv1_INV_0 (div1_not0001_inv)
+     FDR:R                     1.026          div1_2
+    ----------------------------------------
+    Total                      7.775ns (3.885ns logic, 3.890ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 620 / 139
+-------------------------------------------------------------------------
+Offset:              7.808ns (Levels of Logic = 6)
+  Source:            hi_in<7> (PAD)
+  Destination:       okHI/hicore/ti_addr_2 (FF)
+  Destination Clock: hi_in<0> rising
+
+  Data Path: hi_in<7> to okHI/hicore/ti_addr_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.821   1.422  hi_in_7_IBUF (hi_in_7_IBUF)
+     begin scope: 'okHI/hicore'
+     LUT3:I0->O            6   0.551   1.071  ti_read_mux0000111 (N19)
+     LUT3:I2->O            5   0.551   1.260  ti_addr_mux0000<1>11 (N4)
+     LUT4:I0->O            1   0.551   0.827  ti_addr_mux0000<2>11 (ti_addr_mux0000<2>11)
+     LUT4:I3->O            1   0.551   0.000  ti_addr_mux0000<2>33 (ti_addr_mux0000<2>)
+     FDE:D                     0.203          ti_addr_2
+    ----------------------------------------
+    Total                      7.808ns (3.228ns logic, 4.580ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 33 / 17
+-------------------------------------------------------------------------
+Offset:              9.272ns (Levels of Logic = 3)
+  Source:            okHI/hicore/hi_drive (FF)
+  Destination:       hi_inout<15> (PAD)
+  Source Clock:      hi_in<0> rising
+
+  Data Path: okHI/hicore/hi_drive to hi_inout<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   0.877  hi_drive (hi_out<2>)
+     end scope: 'okHI/hicore'
+     INV:I->O             16   0.551   1.237  okHI/hi_drive_b1_INV_0 (okHI/hi_drive_b)
+     IOBUF:T->IO               5.887          okHI/iobuf15 (hi_inout<15>)
+    ----------------------------------------
+    Total                      9.272ns (7.158ns logic, 2.114ns route)
+                                       (77.2% logic, 22.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              8.637ns (Levels of Logic = 2)
+  Source:            count1_7 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk1 rising
+
+  Data Path: count1_7 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.720   0.921  count1_7 (count1_7)
+     INV:I->O              1   0.551   0.801  led<7>1_INV_0 (led_7_OBUF)
+     OBUF:I->O                 5.644          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      8.637ns (6.915ns logic, 1.722ns route)
+                                       (80.1% logic, 19.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.27 secs
+ 
+--> 
+
+Total memory usage is 4521800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
